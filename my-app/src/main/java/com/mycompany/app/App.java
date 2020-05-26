@@ -26,7 +26,7 @@ import org.apache.spark.sql.SparkSession;
 public class App {
     public static void main(String[] args) throws IOException
     {  
-        /*
+        
         AWSCredentials credentials = new BasicAWSCredentials("AKIAJZDHCBVU4JKIJRSA", "kSOaPe6hGW5l4d9nt1BSsGZ+cjI86GZZSv2jOS6X");
         AmazonS3 s3client = AmazonS3ClientBuilder.standard()
             .withCredentials(new AWSStaticCredentialsProvider(credentials))
@@ -67,9 +67,9 @@ public class App {
         while((line = reader.readLine()) != null && count < 10){
             System.out.println(line);
             count++;
-        } */
+        } 
    
-
+/*
 SparkSession spark = new SparkSession.Builder().appName("APP").master("local[*]").getOrCreate();
 spark.sparkContext().setLogLevel("WARN");
 spark.sparkContext().hadoopConfiguration().set("fs.s3a.endpoint", "s3-us-east-2.amazonaws.com");
@@ -78,6 +78,6 @@ spark.sparkContext().hadoopConfiguration().set("fs.s3a.secret.key", "kSOaPe6hGW5
 //spark.sparkContext().hadoopConfiguration().addResource("conf.xml");
 Dataset<Row> ds = spark.read().option("header", true)
  .csv("s3a://project-2-group-3-bucket-cpbc/Input/vgsales-12-4-2019-short.csv").cache();
-ds.printSchema();
+ds.printSchema();*/
     }
 }
